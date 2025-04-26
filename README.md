@@ -2,15 +2,15 @@
 
 ## How do I install these formulae?
 
-`brew install runsecret/tap/<formula>`
+`brew install runsecret/tap/rsec`
 
-Or `brew tap runsecret/tap` and then `brew install <formula>`.
+Or `brew tap runsecret/tap` and then `brew install rsec`.
 
 Or, in a `brew bundle` `Brewfile`:
 
 ```ruby
 tap "runsecret/tap"
-brew "<formula>"
+brew "rsec"
 ```
 
 ## Documentation

@@ -5,21 +5,21 @@
 class Rsec < Formula
   desc "Simple, powerful, and secure secret management for your applications"
   homepage "https://github.com/runsecret/rsec"
-  version "0.3.13"
+  version "0.5.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/runsecret/rsec/releases/download/v0.3.13/rsec_Darwin_x86_64.tar.gz"
-      sha256 "bfc26cc366ca813a47b785f6247e7ce7a556ca273fbe4e6ef6e5440cacb052f7"
+      url "https://github.com/runsecret/rsec/releases/download/v0.5.0/rsec_Darwin_x86_64.tar.gz"
+      sha256 "02352d618efcf33db178dc06fa7f86b9eb199efe45aa97e06a450a2ced39f667"
 
       def install
         bin.install "rsec"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/runsecret/rsec/releases/download/v0.3.13/rsec_Darwin_arm64.tar.gz"
-      sha256 "248db7fab0061ab3253926cb1bd7391531405033bab16f203a4cb1073c33cbdd"
+      url "https://github.com/runsecret/rsec/releases/download/v0.5.0/rsec_Darwin_arm64.tar.gz"
+      sha256 "c94015c942a363d4781b0110d7d9d90bb05fea10055e5b870a684af210681d08"
 
       def install
         bin.install "rsec"
@@ -28,24 +28,18 @@ class Rsec < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/runsecret/rsec/releases/download/v0.3.13/rsec_Linux_x86_64.tar.gz"
-        sha256 "4e0363f03312083bc3b16da657bf2379477f50ed09345b34cf507d82af04eb0d"
-
-        def install
-          bin.install "rsec"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/runsecret/rsec/releases/download/v0.5.0/rsec_Linux_x86_64.tar.gz"
+      sha256 "ab4393f6642b07ec4d341cf9f9cc09ead374ba06ebf1df8aa0428a237357afbf"
+      def install
+        bin.install "rsec"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/runsecret/rsec/releases/download/v0.3.13/rsec_Linux_arm64.tar.gz"
-        sha256 "3b77cd0a1ad0eacd3549276b9c20d818e3945c57ae0150e581a481cf04ef52dd"
-
-        def install
-          bin.install "rsec"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/runsecret/rsec/releases/download/v0.5.0/rsec_Linux_arm64.tar.gz"
+      sha256 "b4405213ffe12bf73551801911edeb959bea2c760b1b8a3b1f2b043df3c499e1"
+      def install
+        bin.install "rsec"
       end
     end
   end

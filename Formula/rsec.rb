@@ -5,21 +5,21 @@
 class Rsec < Formula
   desc "Simple, powerful, and secure secret management for your applications"
   homepage "https://github.com/runsecret/rsec"
-  version "0.4.0"
+  version "0.5.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/runsecret/rsec/releases/download/v0.4.0/rsec_Darwin_x86_64.tar.gz"
-      sha256 "e98da7536c42d88bd9d80e26bb3d28edc1e7c107699ef93d782b58987c36cecb"
+      url "https://github.com/runsecret/rsec/releases/download/v0.5.0/rsec_Darwin_x86_64.tar.gz"
+      sha256 "02352d618efcf33db178dc06fa7f86b9eb199efe45aa97e06a450a2ced39f667"
 
       def install
         bin.install "rsec"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/runsecret/rsec/releases/download/v0.4.0/rsec_Darwin_arm64.tar.gz"
-      sha256 "82724875073541b58e013c994d36d8ba85a91ecd67692392c464efa67bea8606"
+      url "https://github.com/runsecret/rsec/releases/download/v0.5.0/rsec_Darwin_arm64.tar.gz"
+      sha256 "c94015c942a363d4781b0110d7d9d90bb05fea10055e5b870a684af210681d08"
 
       def install
         bin.install "rsec"
@@ -29,15 +29,15 @@ class Rsec < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/runsecret/rsec/releases/download/v0.4.0/rsec_Linux_x86_64.tar.gz"
-      sha256 "f56962682862508f08669a21138c40f9b483bb4955e7a23285c6159d73b4043a"
+      url "https://github.com/runsecret/rsec/releases/download/v0.5.0/rsec_Linux_x86_64.tar.gz"
+      sha256 "ab4393f6642b07ec4d341cf9f9cc09ead374ba06ebf1df8aa0428a237357afbf"
       def install
         bin.install "rsec"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/runsecret/rsec/releases/download/v0.4.0/rsec_Linux_arm64.tar.gz"
-      sha256 "ceeb52864462952485f8a14aef52d6e705c0266f0b6c292cf63069fc63ff2cee"
+      url "https://github.com/runsecret/rsec/releases/download/v0.5.0/rsec_Linux_arm64.tar.gz"
+      sha256 "b4405213ffe12bf73551801911edeb959bea2c760b1b8a3b1f2b043df3c499e1"
       def install
         bin.install "rsec"
       end
